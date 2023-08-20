@@ -1,26 +1,50 @@
 import React, { useState } from "react";
 import Card from "./Card";
 
+const imgList = [
+  "add",
+  "adiff",
+  "area",
+  "arisum",
+  "binom",
+  "choose",
+  "circarea",
+  "circle",
+  "cos",
+  "cosrule",
+  "cossqr",
+  "diffsqr",
+  "disc",
+  "ediff",
+  "infseries",
+  "int",
+  "len",
+  "log",
+  "loginv",
+  "normal",
+  "perm",
+  "perp",
+  "prime",
+  "pythag",
+  "shift",
+  "sin",
+  "sinsqr",
+  "stretch",
+  "tan",
+  "tangent",
+  "tree",
+].sort(() => Math.random() - 0.5);
+
+const initialCards = [];
+
+for (let i = 1; i < 9; i++) {
+  initialCards.push({ id: i, img: `/img/${imgList[i]}1.png` });
+  initialCards.push({ id: i, img: `/img/${imgList[i]}2.png` });
+}
+
 function Cards() {
   const [items, setItems] = useState(
-    [
-      { id: 1, img: "/img/circle1.png", stat: "" },
-      { id: 1, img: "/img/circle2.png", stat: "" },
-      { id: 2, img: "/img/cosrule1.png", stat: "" },
-      { id: 2, img: "/img/cosrule2.png", stat: "" },
-      { id: 3, img: "/img/ediff1.png", stat: "" },
-      { id: 3, img: "/img/ediff2.png", stat: "" },
-      { id: 4, img: "/img/infseries1.png", stat: "" },
-      { id: 4, img: "/img/infseries2.png", stat: "" },
-      { id: 5, img: "/img/int1.png", stat: "" },
-      { id: 5, img: "/img/int2.png", stat: "" },
-      { id: 6, img: "/img/pythag1.png", stat: "" },
-      { id: 6, img: "/img/pythag2.png", stat: "" },
-      { id: 7, img: "/img/sin1.png", stat: "" },
-      { id: 7, img: "/img/sin2.png", stat: "" },
-      { id: 8, img: "/img/tan1.png", stat: "" },
-      { id: 8, img: "/img/tan2.png", stat: "" },
-    ].sort(() => Math.random() - 0.5)
+    initialCards.sort(() => Math.random() - 0.5)
   );
 
   const [prev, setPrev] = useState(-1);
