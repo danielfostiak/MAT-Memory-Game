@@ -27,7 +27,12 @@ function Cards() {
   const [locked, setLocked] = useState(false);
 
   function check(current) {
-    if (locked) return;
+    if (
+      locked ||
+      items[current].stat == "correct" ||
+      items[prev].stat == "correct"
+    )
+      return;
     if (items[current].id == items[prev].id) {
       items[current].stat = "correct";
       items[prev].stat = "correct";
@@ -49,7 +54,7 @@ function Cards() {
   }
 
   function handleClick(id) {
-    if (locked) return;
+    if (locked || items[id].stat == "correct") return;
     if (prev === -1) {
       items[id].stat = "active";
       setItems([...items]);

@@ -20,8 +20,10 @@ h1 {
   margin-bottom: 1em;
 }
 .container {
-  height: 700px;
-  width: 700px;
+  height: flex-direction;
+  max-height: 700px;
+  width: 90%;
+  max-width: 700px;
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(4, 25%);
@@ -82,4 +84,11 @@ img {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
 }
