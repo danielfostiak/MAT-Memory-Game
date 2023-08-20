@@ -4,22 +4,22 @@ import Card from "./Card";
 function Cards() {
   const [items, setItems] = useState(
     [
-      { id: 1, img: "/img/html.png", stat: "" },
-      { id: 1, img: "/img/html.png", stat: "" },
-      { id: 2, img: "/img/css.png", stat: "" },
-      { id: 2, img: "/img/css.png", stat: "" },
-      { id: 3, img: "/img/js.png", stat: "" },
-      { id: 3, img: "/img/js.png", stat: "" },
-      { id: 4, img: "/img/scss.png", stat: "" },
-      { id: 4, img: "/img/scss.png", stat: "" },
-      { id: 5, img: "/img/react.png", stat: "" },
-      { id: 5, img: "/img/react.png", stat: "" },
-      { id: 6, img: "/img/vue.png", stat: "" },
-      { id: 6, img: "/img/vue.png", stat: "" },
-      { id: 7, img: "/img/angular.png", stat: "" },
-      { id: 7, img: "/img/angular.png", stat: "" },
-      { id: 8, img: "/img/nodejs.png", stat: "" },
-      { id: 8, img: "/img/nodejs.png", stat: "" },
+      { id: 1, img: "/img/circle1.png", stat: "" },
+      { id: 1, img: "/img/circle2.png", stat: "" },
+      { id: 2, img: "/img/cosrule1.png", stat: "" },
+      { id: 2, img: "/img/cosrule2.png", stat: "" },
+      { id: 3, img: "/img/ediff1.png", stat: "" },
+      { id: 3, img: "/img/ediff2.png", stat: "" },
+      { id: 4, img: "/img/infseries1.png", stat: "" },
+      { id: 4, img: "/img/infseries2.png", stat: "" },
+      { id: 5, img: "/img/int1.png", stat: "" },
+      { id: 5, img: "/img/int2.png", stat: "" },
+      { id: 6, img: "/img/pythag1.png", stat: "" },
+      { id: 6, img: "/img/pythag2.png", stat: "" },
+      { id: 7, img: "/img/sin1.png", stat: "" },
+      { id: 7, img: "/img/sin2.png", stat: "" },
+      { id: 8, img: "/img/tan1.png", stat: "" },
+      { id: 8, img: "/img/tan2.png", stat: "" },
     ].sort(() => Math.random() - 0.5)
   );
 

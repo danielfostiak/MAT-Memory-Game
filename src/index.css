@@ -6,6 +6,11 @@ html,
 body {
   height: 100%;
 }
+
+.App {
+  padding: 2rem;
+}
+
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -19,15 +24,14 @@ h1 {
   text-align: center;
   margin-bottom: 1em;
 }
+
 .container {
-  height: flex-direction;
-  max-height: 700px;
-  width: 90%;
   max-width: 700px;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(4, 25%);
-  gap: 1em;
+  grid-template-columns: repeat(4, 23%);
+  grid-template-rows: repeat(4, 23%);
+  gap: 0.7em;
 }
 
 .card {
@@ -56,6 +60,7 @@ h1 {
   transform: scale(0);
   animation: 2s hideImage linear;
 }
+
 @keyframes hideImage {
   0%,
   70% {
@@ -86,9 +91,8 @@ img {
   user-select: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .container {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 100%;
   }
 }

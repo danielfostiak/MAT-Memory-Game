@@ -2,8 +2,8 @@ import Cards from "./components/Cards";
 
 function App() {
   return (
-    <div>
-      <h1>Cardflip</h1>
+    <div className="App">
+      <h1>MAT Cardflip</h1>
       <Cards />
     </div>
   );
