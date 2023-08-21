@@ -14,7 +14,8 @@ body {
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #fae19d;
+  color: aliceblue;
+  background-color: #002146;
   display: flex;
   justify-content: center;
   align-items: center;
