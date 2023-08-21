@@ -55,8 +55,8 @@ h1 {
   }
 }
 .card img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%;
+  max-height: 90%;
   transition: transform 0.5s;
   transform: scale(0);
   animation: 2s hideImage linear;
