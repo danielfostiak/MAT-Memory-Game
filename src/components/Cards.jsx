@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import Card from "./Card";
 
-const imgList = [
+const shuffle = (arr) =>
+  arr
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+
+const imgList = shuffle([
   "add",
   "adiff",
   "area",
@@ -33,7 +39,7 @@ const imgList = [
   "tan",
   "tangent",
   "tree",
-].sort(() => Math.random() - 0.5);
+]);
 
 const initialCards = [];
 
@@ -43,10 +49,7 @@ for (let i = 1; i < 9; i++) {
 }
 
 function Cards() {
-  const [items, setItems] = useState(
-    initialCards.sort(() => Math.random() - 0.5)
-  );
-
+  const [items, setItems] = useState(shuffle(initialCards));
   const [prev, setPrev] = useState(-1);
   const [locked, setLocked] = useState(false);
 
@@ -92,9 +95,13 @@ function Cards() {
 
   return (
     <div className="container">
-      {items.map((item, index) => (
-        <Card key={index} item={item} id={index} handleClick={handleClick} />
-      ))}
+      {items.length > 0 ? (
+        items.map((item, index) => (
+          <Card key={index} item={item} id={index} handleClick={handleClick} />
+        ))
+      ) : (
+        <p>hello</p>
+      )}
     </div>
   );
 }
